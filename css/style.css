@@ -1,0 +1,260 @@
+/* Ensure hero video background works on all devices */
+#hero-video {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: #111;
+}
+@media (max-width: 640px) {
+    #hero-video {
+        min-width: 100vw;
+        min-height: 100vh;
+        max-width: none;
+        max-height: none;
+    }
+}
+/* Basic resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #111111;
+}
+/* keep any additional custom rules here if needed */
+}
+.stats h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+.stat-item {
+    text-align: center;
+}
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #c49b25;
+}
+.stat-label {
+    display: block;
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* work steps */
+.work {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+.work h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.work-steps {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.work-steps li {
+    margin-bottom: 20px;
+}
+
+/* advantages */
+.advantages {
+    padding: 80px 0;
+    background: #fff;
+}
+.advantages h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.adv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 30px;
+}
+.adv-item h3 {
+    font-size: 1.2rem;
+    color: #c49b25;
+    margin-bottom: 10px;
+}
+.adv-item p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Projects */
+.projects {
+    padding: 80px 0;
+    background: #fff;
+}
+.projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .4s ease;
+}
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-icon {
+    opacity: 0;
+    transition: opacity .3s;
+}
+.card:hover .card-icon {
+    opacity: 1;
+}
+.card h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    background: rgba(196,155,37,0.8);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+.card:hover img {
+    transform: scale(1.1);
+}
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* Contact form */
+.contact-section {
+    padding: 80px 0;
+    background: #fff;
+}
+.contact-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Footer */
+.site-footer {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* icons */
+.icon {
+    vertical-align: middle;
+    margin-right: 6px;
+    fill: currentColor;
+}
+.footer-contacts p {
+    margin-bottom: 10px;
+}
+.site-footer .copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        width: 240px;
+        transform: translateX(100%);
+        transition: transform .3s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        padding: 20px;
+    }
+    .site-nav.open {
+        transform: translateX(0);
+    }
+    .site-nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+    .contacts-header {
+        display: none;
+    }
+}
