@@ -31,6 +31,8 @@
         }
     </script>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 </head>
 <body class="font-sans font-light text-white bg-[#111111]">
     <header class="bg-black fixed w-full z-50">
@@ -52,8 +54,23 @@
                     <svg class="w-3 h-3 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.531l.4 1.6a2 2 0 01-.45 1.998l-2.2 2.2a11.042 11.042 0 005.516 5.516l2.2-2.2a2 2 0 011.998-.45l1.6.4A2 2 0 0121 17.72V21a2 2 0 01-2 2h-1C9.163 23 1 14.837 1 4V3a2 2 0 012-2h0z"/></svg>
                     <span class="hidden lg:inline">050 660 55 05</span>
                 </a>
+                <a href="https://t.me/+380956605505" target="_blank" rel="noopener noreferrer" class="flex items-center text-beige hover:text-white transition" title="Telegram">
+                    <img src="assets/img/telegram.png" alt="Telegram" class="w-6 h-6">
+                </a>
+                <a href="viber://chat/?number=%2B380956605505" class="flex items-center text-beige hover:text-white transition" title="Viber">
+                    <img src="assets/img/viber.png" alt="Viber" class="w-6 h-6 object-contain">
+                </a>
             </div>
-            <button class="md:hidden nav-toggle text-white focus:outline-none">
+            <div class="md:hidden flex items-center gap-2">
+                <a href="https://t.me/+380956605505" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-2 rounded-lg bg-white/5 hover:bg-beige/20 transition-all duration-300" title="Telegram">
+                    <img src="assets/img/telegram.png" alt="Telegram" class="w-5 h-5">
+                </a>
+                <a href="viber://chat/?number=%2B380956605505" class="flex items-center justify-center p-2 rounded-lg bg-white/5 hover:bg-beige/20 transition-all duration-300" title="Viber">
+                    <img src="assets/img/viber.png" alt="Viber" class="w-5 h-5 object-contain">
+                </a>
+                <div class="w-px h-6 bg-white/20 mx-1"></div>
+            </div>
+            <button class="md:hidden nav-toggle text-white focus:outline-none p-2 rounded-lg hover:bg-white/5 transition-all duration-300">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -61,10 +78,14 @@
         </div>
         <!-- mobile menu -->
         <div class="md:hidden mobile-nav hidden fixed inset-0 z-40 flex items-start justify-end bg-black/60 backdrop-blur-sm">
-            <div class="w-11/12 max-w-xs bg-[#181818] rounded-l-3xl shadow-2xl mt-0 pt-8 pb-8 px-6 flex flex-col gap-4 animate-slideInRight">
-                <button class="self-end mb-2 p-2 rounded-full hover:bg-[#222] transition" onclick="document.querySelector('.mobile-nav').classList.add('hidden')">
-                    <svg class="w-7 h-7 text-beige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
+            <div class="w-11/12 max-w-xs bg-[#181818] rounded-l-3xl shadow-2xl mt-0 pb-8 flex flex-col gap-4 animate-slideInRight">
+                <!-- Mobile header with logo and social icons -->
+                <div class="flex items-center justify-between w-full">
+                    <button class="p-2 rounded-full hover:bg-[#222] transition" onclick="document.querySelector('.mobile-nav').classList.add('hidden')">
+                        <svg class="w-6 h-6 text-beige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+                <div class="px-6 flex flex-col gap-4">
                 <a href="#hero" class="flex items-center gap-3 px-4 py-4 rounded-xl text-lg font-semibold uppercase tracking-wide hover:bg-beige/10 hover:text-beige transition">
                     <svg class="w-6 h-6 text-beige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 6h18M3 18h18"/></svg>
                     Головна
@@ -85,7 +106,8 @@
                     <svg class="w-6 h-6 text-beige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 2v6h6"/><path d="M2 12a10 10 0 1020 0 10 10 0 00-20 0z"/></svg>
                     Контакти
                 </a>
-                <div class="mt-6 flex flex-col gap-3">
+                </div>
+                <div class="px-6 mt-6 flex flex-col gap-3">
                     <a href="tel:+380676605505" class="flex items-center justify-center gap-2 bg-beige text-[#111] py-3 rounded-xl font-bold text-lg uppercase tracking-wide hover:bg-[#b58a5a] transition">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.531l.4 1.6a2 2 0 01-.45 1.998l-2.2 2.2a11.042 11.042 0 005.516 5.516l2.2-2.2a2 2 0 011.998-.45l1.6.4A2 2 0 0121 17.72V21a2 2 0 01-2 2h-1C9.163 23 1 14.837 1 4V3a2 2 0 012-2h0z"/></svg>
                         067 660 55 05
@@ -106,7 +128,8 @@
         </video>
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="relative z-10 text-center px-4">
-            <h1 class="max-w-8xl mx-auto text-4xl md:text-6xl font-bold uppercase tracking-wider text-white mb-6"><span style="color: rgb(248, 224, 5);">Ремонт квартир</span> <br>«під ключ» <br>вигідніше ніж самостійно</h1>
+            <h1 class="max-w-8xl mx-auto text-4xl md:text-6xl font-bold uppercase tracking-wider text-white mb-6"><span style="color: rgb(248, 224, 5);">Ремонт квартир</span> <br>«під ключ»</h1>
+            <p class="max-w-4xl mx-auto text-lg md:text-2xl font-light text-white/90 mb-12 leading-relaxed">Якість, яку видно. Надійність, яку відчуваєш.<br>Будуємо не просто споруди — будуємо впевненість на роки.</p>
             <div class="flex flex-col items-center gap-4 mb-8 w-full max-w-3xl mx-auto md:flex-row md:justify-center md:items-center md:gap-12 md:flex-nowrap md:whitespace-nowrap md:flex-nowrap">
                 <div class="flex items-center gap-2 md:gap-3 text-lg md:text-xl font-medium text-white/90">
                     <svg class="w-6 h-6 text-beige flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -411,6 +434,182 @@
             </div>
         </div>
     </section>
+    
+    <!-- Категории услуг: Standard, Medium, VIP -->
+    <section id="services" class="py-20 bg-[#181818] text-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase text-center mb-16 tracking-wide">Пакети послуг</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Standard -->
+                <div class="bg-gradient-to-br from-[#222] via-[#181818] to-[#111] rounded-3xl overflow-hidden shadow-2xl flex flex-col h-full">
+                    <div class="gallery-standard">
+                        <a href="assets/img/standart/IMG_6748.JPG" data-fancybox="gallery-standard" class="block w-full h-64 bg-[#111] overflow-hidden group relative mb-4">
+                            <img src="assets/img/standart/IMG_6748.JPG" alt="Standard 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4.5-4.5 3 3 5-5 2.5 2.5V5H4v10z"/></svg>
+                            </div>
+                        </a>
+                        <a href="assets/img/standart/IMG_6751.JPG" data-fancybox="gallery-standard" class="hidden"></a>
+                        <a href="assets/img/standart/IMG_6754.JPG" data-fancybox="gallery-standard" class="hidden"></a>
+                        <a href="assets/img/standart/IMG_6756.JPG" data-fancybox="gallery-standard" class="hidden"></a>
+                        <a href="assets/img/standart/IMG_6757.JPG" data-fancybox="gallery-standard" class="hidden"></a>
+                        <a href="assets/img/standart/IMG_6758.JPG" data-fancybox="gallery-standard" class="hidden"></a>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-bold text-beige mb-4">Standard</h3>
+                        <ul class="space-y-3 text-white/80 mb-6">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>Базовий ремонт</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>2 роки гарантії</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>Стандартні матеріали</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-white/60">Натисніть на фото щоб переглянути галерею</p>
+                    </div>
+                </div>
+
+                <!-- Medium -->
+                <div class="bg-gradient-to-br from-beige/10 via-[#181818] to-[#111] rounded-3xl overflow-hidden shadow-2xl border border-beige/30 flex flex-col h-full">
+                    <div class="gallery-medium">
+                        <a href="assets/img/medium/IMG_6718.JPG" data-fancybox="gallery-medium" class="block w-full h-64 bg-[#111] overflow-hidden group relative mb-4">
+                            <img src="assets/img/medium/IMG_6718.JPG" alt="Medium 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4.5-4.5 3 3 5-5 2.5 2.5V5H4v10z"/></svg>
+                            </div>
+                        </a>
+                        <a href="assets/img/medium/IMG_6719.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6720.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6721.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6731.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6732.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6737.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6738.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6739.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6741.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                        <a href="assets/img/medium/IMG_6742.JPG" data-fancybox="gallery-medium" class="hidden"></a>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="bg-beige/10 rounded-lg px-3 py-1 inline-block mb-4 w-fit">
+                            <span class="text-beige text-sm font-semibold">Найпопулярніший</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-beige mb-4">Medium</h3>
+                        <ul class="space-y-3 text-white/80 mb-6">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>Дизайнерський ремонт</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>3 роки гарантії</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>Преміум матеріали</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-white/60">Натисніть на фото щоб переглянути галерею</p>
+                    </div>
+                </div>
+
+                <!-- VIP -->
+                <div class="bg-gradient-to-br from-[#222] via-[#181818] to-[#111] rounded-3xl overflow-hidden shadow-2xl flex flex-col h-full">
+                    <div class="gallery-vip">
+                        <a href="assets/img/Vip/IMG_6616.JPG" data-fancybox="gallery-vip" class="block w-full h-64 bg-[#111] overflow-hidden group relative mb-4">
+                            <img src="assets/img/Vip/IMG_6616.JPG" alt="VIP 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4.5-4.5 3 3 5-5 2.5 2.5V5H4v10z"/></svg>
+                            </div>
+                        </a>
+                        <a href="assets/img/Vip/IMG_6618.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6619.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6620.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6624.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6625.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6626.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6628.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6630.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6631.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6632.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6633.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6634.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6635.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6636.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6651.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6653.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6656.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6661.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                        <a href="assets/img/Vip/IMG_6665.JPG" data-fancybox="gallery-vip" class="hidden"></a>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-bold text-beige mb-4">VIP</h3>
+                        <ul class="space-y-3 text-white/80 mb-6">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>Преміум дизайн</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>5 років гарантії</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-beige flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></path></svg>
+                                <span>Люкс матеріали</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-white/60">Натисніть на фото щоб переглянути галерею</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Videos Section -->
+    <section id="videos" class="py-20 bg-[#111111] text-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase text-center mb-16 tracking-wide">Наші роботи у відео</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Video 1 -->
+                <div class="relative group overflow-hidden rounded-2xl bg-[#181818] shadow-2xl h-64">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/Ag0fyVdZktM?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="relative group overflow-hidden rounded-2xl bg-[#181818] shadow-2xl h-64">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/_VoXhpXsDXo?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="relative group overflow-hidden rounded-2xl bg-[#181818] shadow-2xl h-64">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/fX27VXHS14Q?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="relative group overflow-hidden rounded-2xl bg-[#181818] shadow-2xl h-64">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/Q-9Mkzc4J8o?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="relative group overflow-hidden rounded-2xl bg-[#181818] shadow-2xl h-64">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/dGnkijvHxIM?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
  <!-- Client Testimonials Block -->
     <section id="testimonials" class="py-20 bg-[#181818] text-white">
         <div class="container mx-auto">
@@ -486,35 +685,165 @@
     </section>
     
 
-    <section id="cta" class="py-20 bg-[#181818] text-white">
-        <div class="container mx-auto flex justify-center">
-            <div class="w-full bg-[#222] rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden px-2 md:px-8 py-2 md:py-6">
-                <div class="w-full md:w-1/2 flex flex-col items-center md:items-start p-8 md:p-10">
-                    <h2 class="text-3xl md:text-4xl font-bold uppercase text-beige mb-4 tracking-wide text-center md:text-left">Залишіть заявку</h2>
-                    <p class="text-lg text-white/80 mb-8 text-center md:text-left">Заповніть форму і ми безкоштовно розрахуємо вартість вашого ремонту.</p>
-                    <form id="tg-form" class="w-full space-y-6">
-                        <div class="flex flex-col gap-2">
-                            <label for="name" class="text-lg font-semibold">Ім'я</label>
-                            <input type="text" id="name" name="name" required class="px-4 py-3 rounded-xl bg-[#181818] border border-[#333] focus:outline-none focus:border-beige text-white placeholder-gray-400" placeholder="Ваше ім'я" />
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="phone" class="text-lg font-semibold">Телефон</label>
-                            <input type="tel" id="phone" name="phone" required class="px-4 py-3 rounded-xl bg-[#181818] border border-[#333] focus:outline-none focus:border-beige text-white placeholder-gray-400" placeholder="Ваш телефон" />
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="comment" class="text-lg font-semibold">Коментар</label>
-                            <textarea id="comment" name="comment" rows="4" class="px-4 py-3 rounded-xl bg-[#181818] border border-[#333] focus:outline-none focus:border-beige text-white placeholder-gray-400" placeholder="Ваш коментар"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-beige text-[#111111] py-3 uppercase font-semibold rounded-xl hover:bg-[#b58a5a] transition text-lg tracking-wide">Відправити заявку</button>
-                        <div id="tg-success" class="hidden text-green-400 text-center font-semibold mt-2">Дякуємо! Заявка відправлена.</div>
-                        <div id="tg-error" class="hidden text-red-400 text-center font-semibold mt-2">Сталася помилка. Спробуйте ще раз.</div>
-                    </form>
-                </div>
-                <div class="w-full md:w-1/2 flex items-stretch">
-                    <div class="w-full h-64 md:h-auto flex items-center justify-center bg-[#181818]">
-                        <img src="assets/img/1.jpg" alt="Ремонт квартири" class="object-cover w-full h-full md:rounded-none rounded-b-3xl md:rounded-r-3xl shadow-xl" loading="lazy">
-                    </div>
-                </div>
+    <section id="gallery" class="py-20 bg-[#181818] text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase text-center mb-4 tracking-wide">Наші роботи</h2>
+            <p class="text-lg text-white/70 text-center mb-12 max-w-3xl mx-auto">Повна колекція наших проектів. Натисніть на будь-яке фото для перегляду в повному розмірі.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Standard Photos -->
+                <a href="assets/img/standart/IMG_6748.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/standart/IMG_6748.JPG" alt="Проект 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/standart/IMG_6751.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/standart/IMG_6751.JPG" alt="Проект 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/standart/IMG_6754.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/standart/IMG_6754.JPG" alt="Проект 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/standart/IMG_6756.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/standart/IMG_6756.JPG" alt="Проект 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/standart/IMG_6757.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/standart/IMG_6757.JPG" alt="Проект 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/standart/IMG_6758.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/standart/IMG_6758.JPG" alt="Проект 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+
+                <!-- Medium Photos -->
+                <a href="assets/img/medium/IMG_6718.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6718.JPG" alt="Проект 7" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6719.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6719.JPG" alt="Проект 8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6720.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6720.JPG" alt="Проект 9" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6721.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6721.JPG" alt="Проект 10" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6731.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6731.JPG" alt="Проект 11" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6732.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6732.JPG" alt="Проект 12" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6737.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6737.JPG" alt="Проект 13" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6738.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6738.JPG" alt="Проект 14" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6739.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6739.JPG" alt="Проект 15" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6741.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6741.JPG" alt="Проект 16" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/medium/IMG_6742.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/medium/IMG_6742.JPG" alt="Проект 17" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+
+                <!-- VIP Photos -->
+                <a href="assets/img/Vip/IMG_6616.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6616.JPG" alt="Проект 18" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6618.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6618.JPG" alt="Проект 19" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6619.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6619.JPG" alt="Проект 20" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6620.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6620.JPG" alt="Проект 21" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6624.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6624.JPG" alt="Проект 22" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6625.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6625.JPG" alt="Проект 23" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6626.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6626.JPG" alt="Проект 24" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6628.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6628.JPG" alt="Проект 25" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6630.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6630.JPG" alt="Проект 26" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6631.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6631.JPG" alt="Проект 27" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6632.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6632.JPG" alt="Проект 28" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6633.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6633.JPG" alt="Проект 29" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6634.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6634.JPG" alt="Проект 30" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6635.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6635.JPG" alt="Проект 31" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6636.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6636.JPG" alt="Проект 32" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6651.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6651.JPG" alt="Проект 33" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6653.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6653.JPG" alt="Проект 34" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6656.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6656.JPG" alt="Проект 35" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6661.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6661.JPG" alt="Проект 36" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="assets/img/Vip/IMG_6665.JPG" data-fancybox="all-gallery" class="group relative overflow-hidden rounded-xl bg-[#111] aspect-square">
+                    <img src="assets/img/Vip/IMG_6665.JPG" alt="Проект 37" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
             </div>
         </div>
     </section>
@@ -533,9 +862,19 @@
                     </a>
                 </div>
                 <div class="flex flex-col items-center md:items-start gap-2">
+                    <span class="text-lg font-semibold mb-1">Месенджери</span>
+                    <div class="flex gap-4">
+                        <a href="https://t.me/+380956605505" target="_blank" rel="noopener noreferrer" class="flex items-center text-beige hover:text-white transition" title="Telegram">
+                            <img src="assets/img/telegram.png" alt="Telegram" class="w-8 h-8">
+                        </a>
+                        <a href="viber://chat/?number=%2B380956605505" class="flex items-center text-beige hover:text-white transition" title="Viber">
+                            <img src="assets/img/viber.png" alt="Viber" class="w-8 h-8 object-contain">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center md:items-start gap-2">
                     <span class="text-lg font-semibold mb-1">Email</span>
                     <a href="mailto:Barcogold@gmail.com" class="flex items-center text-xl font-bold text-beige hover:text-white transition">
-                        
                         Barcogold@gmail.com
                     </a>
                 </div>
@@ -547,5 +886,22 @@
     </footer>
 
     <script src="js/script.js"></script>
+    
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
+    <script>
+        // Initialize Fancybox for galleries
+        Fancybox.bind('[data-fancybox]', {
+            autoSize: true,
+            width: 1200,
+            height: 675,
+            on: {
+                reveal: (fancybox, slide) => {
+                    console.log('Image loaded');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
